@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+header,
+footer {
+  background-color: #00003b;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > img {
+  height: 4rem;
+  user-select: none;
+}
+
+footer > img {
+  height: 2.5rem;
+  user-select: none;
+}
+
+footer > p {
+  color: white;
+  margin-left: 0.25rem;
+}
+
+section {
+  height: 100vh;
+}
+
+.landing-section {
+  display: flex;
+  background-image: url("./assets/bg-landing.png");
+  background-size: cover;
+}
+
+.text-container {
+  background-color: #46a7664d;
+  border-radius: 1rem;
+  margin: 8% 4%;
+  padding: 0.75rem;
+  height: fit-content;
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-wrap: pretty;
+  line-height: 1.75rem;
+}
+
+.text-container > div {
+  margin-top: 1rem;
+}
+
+span {
+  color: #00003b;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./assets/bg.png");
+  background-size: cover;
+}
+
+form {
+  background-color: #46a7664d;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.url-container {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.url-container input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: 0;
+}
+
+button {
+  font-family: "Lora", serif;
+  border: none;
+  background-color: #00003b;
+  color: white;
+  padding: 0 3rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  box-shadow: 0px 10px 4px 0px #00000040;
+  cursor: pointer;
+}
+
+input {
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: #00003b;
+  border-style: solid;
+  border-width: 5px;
+  width: 50vw;
+  box-shadow: 0px 10px 4px 0px #00000040;
+}
+
+@media (max-width: 425px) {
+  .text-container {
+    margin: 30% 5%;
+  }
+  form {
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+  button {
+    padding: 0 1.5rem;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .text-container {
+    margin: 15% 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-container {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    max-width: none;
+  }
+  button,
+  input {
+    font-size: 1rem;
+  }
+  .url-container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text-container {
+    margin: 10% 5%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .text-container > div {
+    margin-top: 2rem;
+  }
+  form {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  button,
+  input {
+    font-size: 2rem;
+  }
+}
