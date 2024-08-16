@@ -6,7 +6,8 @@ const Main = () => {
 
   const handleSubmit = () => {
     if (url) {
-      fetch(import.meta.env.VITE_API_URL, {
+      const { VITE_PROTOCOL, VITE_ORIGIN, VITE_ROUTE } = import.meta.env;
+      fetch(`${VITE_PROTOCOL}://${VITE_ORIGIN}${VITE_ROUTE}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -20,7 +21,7 @@ const Main = () => {
           if ("error" in json) {
             setRes(json.error);
           } else {
-            setRes(json.origin + json.short_url);
+            setRes(`${json.origin}/${json.short_url}`);
           }
         });
     }
@@ -29,15 +30,11 @@ const Main = () => {
   return (
     <section className="main-section">
       <form>
-        <label htmlFor="url">
+        <label>
           Enter <span>URL</span> link:
         </label>
         <div className="url-container">
-          <input
-            id="url"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-          />
+          <input value={url} onChange={(e) => setUrl(e.target.value)} />
           <button type="button" onClick={handleSubmit}>
             Slice URL
           </button>
