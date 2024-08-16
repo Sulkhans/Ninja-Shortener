@@ -1,7 +1,7 @@
 import Main from "./components/Main";
-import logo from "./assets/logo.png";
-import gmail from "./assets/gmail.png";
 import Landing from "./components/Landing";
+import logo from "./assets/logo.png";
+import github from "./assets/github.png";
 
 const App = () => {
   return (
@@ -14,8 +14,14 @@ const App = () => {
         <Main />
       </main>
       <footer>
-        <img src={gmail} />
-        <p>kiruitshortener@gmail.com</p>
+        <a
+          href="https://github.com/SosoTaE/Ninja-Shortener-backend"
+          target="_blank"
+          className="github"
+        >
+          <img src={github} />
+          /SosoTaE
+        </a>
       </footer>
     </>
   );
